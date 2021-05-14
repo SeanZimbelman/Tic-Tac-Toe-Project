@@ -5,7 +5,7 @@ const playText = document.getElementById("playText");
 const spaces = [null, null, null, null, null, null, null, null, null];
 const O_TEXT = "O";
 const X_TEXT = "X";
-let currentPlayer = O_TEXT;
+let currentPlayer = X_TEXT;
 let BUG = 0;
 
 const drawBoard = () => {
@@ -116,7 +116,7 @@ restartBtn.addEventListener("click", () => {
     });
     playText.innerHTML = `Let's Play!!`;
 
-    currentPlayer = O_TEXT;
+    currentPlayer = X_TEXT;
 });
 
 drawBoard();
