@@ -39,20 +39,22 @@ function boxClicked(i) {
             return;
         }
         currentPlayer = currentPlayer === O_TEXT ? X_TEXT : O_TEXT;
+        runAI()
     }
-    runAI()
 }
 
 function runAI() {
     let number = 0;
+    let error = 0;
     while (true) {
         number = Math.floor(Math.random() * 9)
         if (!spaces[number]) {
             break;
         }
-        if(BUG > 4){
+        if(error > 1000){
             break;
         }
+        error++
     }
     spaces[number] = currentPlayer;
     let temp = `${number}`
